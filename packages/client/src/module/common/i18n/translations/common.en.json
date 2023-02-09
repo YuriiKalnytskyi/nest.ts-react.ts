@@ -1,0 +1,7 @@
+{
+  "something_went_wrong": "something went wrong",
+  "validateSchema_email_invalid": "Invalid email address",
+  "validateSchema_email_required": "Email is required",
+  "validateSchema_password_length": "Must be at least 8 characters.",
+  "validateSchema_password_required": "Password is required"
+}
