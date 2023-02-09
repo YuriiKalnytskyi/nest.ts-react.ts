@@ -1,4 +1,1 @@
-export const exampleInitialValues = {
-    email: '',
-    password: ''
-}
+export const exampleInitialValues = {  email: '',  password: ''}

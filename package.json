@@ -10,8 +10,8 @@
   "scripts": {
     "start:local": "lerna run --parallel start:local",
     "format:check": "prettier --check './**/*.{tsx, ts}'",
-    "format:fix": "prettier --write './**/*.{tsx, ts}'",
-    "lint:check": "eslint './**/*.{tsx, ts}'"
+    "format:fix": "prettier --write './**/*.{ts, tsx}'",
+    "lint:check": "eslint 'packages/**/*.{tsx, ts}'"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.51.0",

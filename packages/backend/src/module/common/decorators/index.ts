@@ -1,2 +1,1 @@
-export * from './docs.decorator';
-export * from './role.decorator';
+export * from './docs.decorator'export * from './role.decorator'

@@ -1,1 +1,1 @@
-export * from './example.validation'
+export * from './example.validation'

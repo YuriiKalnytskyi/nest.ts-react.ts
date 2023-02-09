@@ -2,6 +2,5 @@ node_modules/
 dist/
 .idea
 
-.env.local
 .env.dev
 .env.prod

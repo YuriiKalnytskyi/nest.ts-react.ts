@@ -1,4 +1,1 @@
-export interface IExampleLogin {
-    email: string;
-    password: string;
-}
+export interface IExampleLogin {  email: string  password: string}
