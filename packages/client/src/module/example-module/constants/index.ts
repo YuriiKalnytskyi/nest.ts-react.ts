@@ -1,1 +1,1 @@
-export * from './initial-value.const'
+export * from './initial-value.const';

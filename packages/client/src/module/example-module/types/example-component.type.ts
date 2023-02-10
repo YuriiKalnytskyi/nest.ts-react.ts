@@ -1,1 +1,1 @@
-export interface IOnSubmitData {  email: string  password: string}export enum EAccountFormControls {  EMAIL = 'email',  PASSWORD = 'password'}
+export interface IOnSubmitData {  email: string;  password: string;  name: string;}export enum EAccountFormControls {  EMAIL = 'email',  PASSWORD = 'password',  PASSWORD2 = 'password2',  NAME = 'name'}

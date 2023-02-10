@@ -1,1 +1,1 @@
-export const LANGUAGE_KEYS = {  EN: 'en',  SP: 'sp'}
+export const LANGUAGE_KEYS = {  EN: 'en',  SP: 'sp'};
