@@ -5,7 +5,7 @@ import { IInputProps } from '../../types';
 import { SPACES } from '../../../../theme';
 import * as Styled from './input.styled';
 
-export const InputTypeOne = ({
+export const Input = ({
   name,
   label,
   gapFromLabel,

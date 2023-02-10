@@ -22,11 +22,10 @@ const commonStyles = css<IInputProps>`
   &::placeholder {
     color: ${({ placeholderColor, theme }) => placeholderColor ?? theme.COLORS.semiTransparentGrey};
   }
-  
+
   &:focus-within {
     outline: 1px solid ${COLORS.semiWhite};
   }
-  
 `;
 
 export const Input = styled.input.attrs(({ gapFromLabel, height, readOnly }: IInputProps) => ({
@@ -42,7 +41,7 @@ export const Input = styled.input.attrs(({ gapFromLabel, height, readOnly }: IIn
   &:focus-within {
     outline: ${({ readOnly }) => readOnly && 'none'};
   }
-  
+
   background: ${({ readOnly }) => readOnly && COLORS.baseGrey};
 
   margin-top: ${({ gapFromLabel }) => gapFromLabel ?? SPACES.xxxs};
@@ -51,7 +50,6 @@ export const Input = styled.input.attrs(({ gapFromLabel, height, readOnly }: IIn
 
   cursor: ${({ readOnly }) => (readOnly ? 'initial' : 'pointer')};
   pointer-events: ${({ readOnly }) => (readOnly ? 'none' : 'initial')};
-  
 `;
 
 export const Input2 = styled.input<IInputProps>`

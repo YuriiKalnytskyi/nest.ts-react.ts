@@ -1,0 +1,55 @@
+.closeAndOther {
+    display: flex;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    max-width: 150px;
+    max-height: 150px;
+    transform: rotate(0);
+}
+
+.closeAndOther:hover circle {
+    opacity: 1;
+}
+
+.svgPath{
+    fill: none;
+    stroke: #000;
+    stroke-width: 7;
+    stroke-linecap: round ;
+    stroke-linejoin: round;
+    --length: 0;
+    --offset:-50;
+    stroke-dasharray: var(--length) var(--total-length);
+    stroke-dashoffset: var(--offset);
+    transition: all 0.8s cubic-bezier(.645, .045,.355,1);
+}
+
+.circle{
+    fill: rgba(226, 74, 74, 0.2);
+    opacity: 0;
+}
+
+.checkboxInput {
+    display: none;
+}
+
+.checkboxInput:checked+svg .lone--1,
+.checkboxInput:checked+svg .lone--3 {
+    --length: 22.627416998;
+    --offset: -94.1149185097;
+}
+
+.checkboxInput:checked+svg .lone--2{
+    --length: 0;
+    --offset: -50;
+}
+
+.lone--1,
+.lone--3 {
+    --total-length: 126.64183044433594;
+}
+
+.lone--2 {
+    --total-length: 70;
+}
