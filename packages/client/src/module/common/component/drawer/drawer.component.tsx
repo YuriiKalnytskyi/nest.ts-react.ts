@@ -7,14 +7,13 @@ import { config } from './drawer.config';
 import * as Styled from './drawer.styled';
 
 export const Drawer = ({
-                         children,
-                         className = '',
-                         slidePosition = 'right',
-                         contentPosition = 'right',
-                         onClose,
-                         open,
-                         component
-                       }: IDrawerProps) => {
+  children,
+  className = '',
+  slidePosition = 'right',
+  contentPosition = 'right',
+  onClose,
+  open
+}: IDrawerProps) => {
   const transitions = useTransition(open, config[slidePosition]);
 
   const onBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -27,7 +26,11 @@ export const Drawer = ({
         {transitions(
           ({ opacity, transform }, isDrawerOpened) =>
             isDrawerOpened && (
-              <animated.div style={{ opacity }} className={`backdrop ${[contentPosition]} ${className}`} onClick={onBackdropClick}>
+              <animated.div
+                style={{ opacity }}
+                className={`backdrop ${[contentPosition]} ${className}`}
+                onClick={onBackdropClick}
+              >
                 <Styled.Block style={{ transform }}>{children}</Styled.Block>
               </animated.div>
             )

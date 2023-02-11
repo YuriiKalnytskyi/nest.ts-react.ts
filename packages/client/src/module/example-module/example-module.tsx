@@ -10,7 +10,7 @@ import { exampleInitialValues } from './constants';
 import { APP_KEYS } from '../common/constants';
 import { exampleService, exampleAuthService } from '../../services';
 import { validationSchemaExample } from './validation';
-import { COLORS } from '../../theme';
+import { COLORS, FONTS } from '../../theme';
 
 import {
   AddEditLayout,
@@ -23,13 +23,16 @@ import {
   Loader,
   Loading,
   Pagination,
-  VideoPlayer,
+  SelectInput,
+  VideoPlayer
 } from '../common/component';
 
 import * as Styled from './example-module.styled';
 import testVideo from '../../assets/video/video-for-testing.mp4';
 import testIcon from '../../assets/icon/example/add-avatar.svg';
-
+import { SignInSocialMedia } from '../auth/common/sign-in-social-media/sign-in-social-media';
+import { ESocialMedia } from '../auth/constants';
+import { ButtonAdd } from '../common/component/button/button-add';
 
 const ExampleModule = () => {
   const client = useQueryClient();
@@ -40,7 +43,6 @@ const ExampleModule = () => {
   const [isLoader, setIsLoader] = useState<boolean>(true);
   const [page, setPage] = useState<number>(1);
 
-
   const [avatarFile, setAvatarFile] = useState<File | null>(null);
   const [avatarString, setAvatarString] = useState(null); // data?.photo || null
 
@@ -48,7 +50,6 @@ const ExampleModule = () => {
     setAvatarString(null);
     setAvatarFile(null);
   };
-
 
   const onError = (err: AxiosError<IAuthError>) => {
     toast.error('Error');
@@ -65,7 +66,6 @@ const ExampleModule = () => {
   //   }
   // );
 
-
   const onSuccess = async () => {
     // await refetch();
     // or
@@ -76,16 +76,16 @@ const ExampleModule = () => {
     (req: IExampleLogin) => exampleService.login(req),
     {
       onSuccess,
-      onError,
-    },
+      onError
+    }
   );
 
   const { mutate: editUser } = useMutation<any, AxiosError<IAuthError>, IExampleLogin>(
     (req: IExampleLogin) => exampleAuthService.editUser(req),
     {
       onSuccess,
-      onError,
-    },
+      onError
+    }
   );
 
   const onSubmit = (data: IOnSubmitData) => {
@@ -123,14 +123,7 @@ const ExampleModule = () => {
       >
         {({ errors, isValid }) => (
           <Form>
-
-
-            <Input
-              name={EAccountFormControls.NAME}
-              label={'name'}
-              required
-
-            />
+            <Input name={EAccountFormControls.NAME} label={'name'} required />
             <Input
               withIcon={Styled.UserInputIcon}
               name={EAccountFormControls.EMAIL}
@@ -156,6 +149,14 @@ const ExampleModule = () => {
               required
               type={'password'}
               mt={'40px'}
+            />
+
+            <SelectInput
+              array={['Patient', 'Doctor']}
+              label={'Виберіть'}
+              name={'selectValue'}
+              isSearch
+              mt={'20px'}
             />
 
             <Styled.SaveButton
@@ -200,17 +201,24 @@ const ExampleModule = () => {
           widthIcon={'30px'}
         />
 
-        <ButtonDelete
-          width={'200px'}
-          mt={'10px'}
-          variant={'inverse'}
-        />
+        <ButtonDelete content={'ButtonDelete'} width={'200px'} mt={'10px'} />
+        <ButtonAdd width={'200px'} height={'50px'} content={'ButtonAdd'} mt={'10px'} />
 
         <AvatarSetup
           label={'Avatar'}
           avatar={avatarString || (avatarFile ? URL.createObjectURL(avatarFile) : undefined)}
           handleAvatarUpload={setAvatarFile}
           delAvatar={deleteAvatar}
+        />
+
+        <SignInSocialMedia
+          component={ESocialMedia.GOOGLE}
+          margin={`${FONTS.SIZES.lxx} 0 ${FONTS.SIZES.s} 0`}
+        />
+
+        <SignInSocialMedia
+          component={ESocialMedia.FACEBOOK}
+          margin={`0 0 ${FONTS.SIZES.xxxxl} 0`}
         />
 
         <CloseAndOther hoverColor={'red'} />
@@ -224,7 +232,6 @@ const ExampleModule = () => {
             currentPage={page}
           />
         ) : null}
-
       </div>
 
       <VideoPlayer
@@ -239,14 +246,12 @@ const ExampleModule = () => {
         contentPosition='right'
         slidePosition='right'
       >
-        <AddEditLayout
-          title={'twst'}
-          text={'test'}
-          onCloseButtonClick={onCloseDrawer}
-        >
+        <AddEditLayout title={'twst'} text={'test'} onCloseButtonClick={onCloseDrawer}>
           <Styled.SaveButton
             content={
-              !isShowLoader ? 'Save' : (
+              !isShowLoader ? (
+                'Save'
+              ) : (
                 <Loader size='small' color={COLORS.primaryRed} height='auto' />
               )
             }
@@ -262,25 +267,21 @@ const ExampleModule = () => {
             type='button'
             variant='inverse'
             onClick={onCloseDrawer}
-
           />
 
           {isLoader ? <Loading className='full-screen' /> : null}
         </AddEditLayout>
       </Drawer>
 
-      {
-        isPopupOpen ?
-          <ConfirmationPopup
-            onClose={() => setIsPopupOpen(false)}
-            onConfirm={() => setIsPopupOpen(false)}
-            title={'fkfkkfkf'}
-            text={'ddkdkdkkdk'}
-            isOpen={isPopupOpen}
-          />
-          : null
-      }
-
+      {isPopupOpen ? (
+        <ConfirmationPopup
+          onClose={() => setIsPopupOpen(false)}
+          onConfirm={() => setIsPopupOpen(false)}
+          title={'fkfkkfkf'}
+          text={'ddkdkdkkdk'}
+          isOpen={isPopupOpen}
+        />
+      ) : null}
     </Styled.Container>
   );
 };

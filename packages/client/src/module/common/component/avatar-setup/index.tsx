@@ -22,10 +22,10 @@ export const AvatarSetup = ({ label, avatar, handleAvatarUpload, delAvatar }: IA
 
         {!avatar && (
           <>
-            <label htmlFor="field-upload">
+            <label htmlFor='field-upload'>
               <Styled.AddAvatar src={addAvatar} alt={i18n.t('alt.avatar') as string} />
             </label>
-            <input id="field-upload" type="file" accept="image/*" onChange={onChange} title="" />
+            <input id='field-upload' type='file' accept='image/*' onChange={onChange} title='' />
           </>
         )}
         {avatar && <Styled.CloseButton onClick={delAvatar}>&#10006;</Styled.CloseButton>}

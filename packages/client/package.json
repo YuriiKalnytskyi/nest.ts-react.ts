@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "check_env_and_start": "env-cmd -f .env.${ENV} node ./check-env.js && env-cmd -f .env.${ENV} react-scripts start",
-    "start:local": "ENV=local npm run check_env_and_start",
+    "start:local": "ENV=local2 npm run check_env_and_start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -25,6 +25,7 @@
     "formik": "^2.2.9",
     "i18next": "^22.4.9",
     "i18next-browser-languagedetector": "^7.0.1",
+    "querystring": "^0.2.1",
     "joi": "^17.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

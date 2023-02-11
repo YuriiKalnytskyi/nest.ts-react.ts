@@ -10,3 +10,4 @@ export * from './loading';
 export * from './pagination';
 export * from './portal';
 export * from './video-player';
+export * from './select-input';

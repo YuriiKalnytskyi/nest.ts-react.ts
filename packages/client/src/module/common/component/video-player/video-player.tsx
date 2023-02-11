@@ -1,6 +1,12 @@
 import React, { useRef, useState, useEffect } from 'react';
 
-import { DocumentElementWithFullscreen, DocumentWithFullscreen, IPlayerOptions, IVideoPlayeriOSProps, TChangeProgressBarWidth } from '../../types';
+import {
+  DocumentElementWithFullscreen,
+  DocumentWithFullscreen,
+  IPlayerOptions,
+  IVideoPlayeriOSProps,
+  TChangeProgressBarWidth
+} from '../../types';
 import { useAspectRatio, useDetectBrowserType } from '../../hooks';
 import { ControlsBar } from './controls-bar';
 import { BigPlayButton } from './controls-bar/controls-bar.styled';
@@ -220,7 +226,7 @@ export const VideoPlayer = ({
         ))}
       </Styled.Player>
 
-      {isPaused ? <BigPlayButton aria-label="play button" onClick={onTogglePlayPause} /> : null}
+      {isPaused ? <BigPlayButton aria-label='play button' onClick={onTogglePlayPause} /> : null}
 
       <ControlsBar
         onTogglePlayPause={onTogglePlayPause}

@@ -1,10 +1,12 @@
 import React, { useRef } from 'react';
+import i18next from 'i18next';
 
-import '../../../../styles/button-delete.css';
-import * as Styled from './button.styled';
 import { IButtonDelete } from '../../types';
 
-export const ButtonDelete = ({...props}: IButtonDelete ) => {
+import * as Styled from './styled/button.styled';
+import '../../../../styles/button.css';
+
+export const ButtonDelete = ({ content, ...props }: IButtonDelete) => {
   const refBtn = useRef<HTMLButtonElement>(null);
 
   const onClick = () => {
@@ -15,12 +17,7 @@ export const ButtonDelete = ({...props}: IButtonDelete ) => {
   };
 
   return (
-    <Styled.Button
-      className='button'
-      onClick={onClick}
-      ref={refBtn}
-      {...props}
-    >
+    <Styled.Button className='button' onClick={onClick} ref={refBtn} {...props}>
       <div className='trash'>
         <div className='top'>
           <div className='paper' />
@@ -32,7 +29,7 @@ export const ButtonDelete = ({...props}: IButtonDelete ) => {
           </svg>
         </div>
       </div>
-      <span>Delete Item</span>
+      <span>{typeof content === 'string' ? i18next.t(content) : content}</span>
     </Styled.Button>
   );
 };

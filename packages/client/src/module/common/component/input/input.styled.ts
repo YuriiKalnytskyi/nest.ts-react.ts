@@ -6,7 +6,6 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 const commonStyles = css<IInputProps>`
-  // display: block;
   margin: 0;
   padding: ${({ innerPads }) => innerPads ?? `${SPACES.xs} ${SPACES.m}`};
 
@@ -33,7 +32,7 @@ export const Input = styled.input.attrs(({ gapFromLabel, height, readOnly }: IIn
   height,
   readOnly
 }))`
-  width: 100%;
+  width: ${({ width }) => width ?? '100%'};
   height: ${({ height }) => height ?? '100%'};
 
   ${commonStyles}
@@ -43,9 +42,7 @@ export const Input = styled.input.attrs(({ gapFromLabel, height, readOnly }: IIn
   }
 
   background: ${({ readOnly }) => readOnly && COLORS.baseGrey};
-
   margin-top: ${({ gapFromLabel }) => gapFromLabel ?? SPACES.xxxs};
-
   position: relative;
 
   cursor: ${({ readOnly }) => (readOnly ? 'initial' : 'pointer')};
@@ -54,7 +51,7 @@ export const Input = styled.input.attrs(({ gapFromLabel, height, readOnly }: IIn
 
 export const Input2 = styled.input<IInputProps>`
   position: relative;
-  width: 100%;
+  width: ${({ width }) => width ?? '100%'};
   height: ${({ height }) => height ?? '100%'};
 
   ${commonStyles}
@@ -75,10 +72,13 @@ export const Input2 = styled.input<IInputProps>`
   }
 `;
 
-export const Label2 = styled.label`
+export const Label2 = styled.label<{ pt?: string; pb?: string; pl?: string; pr?: string }>`
   position: absolute;
   left: 0;
-  padding: 10px;
+  padding-left: ${({ pl }) => pl ?? SPACES.xs};
+  padding-right: ${({ pr }) => pr ?? SPACES.xs};
+  padding-bottom: ${({ pb }) => pb ?? SPACES.xs};
+  padding-top: ${({ pt }) => pt ?? SPACES.xs};
   pointer-events: none;
   color: rgba(22, 22, 22, 0.25);
   transition: 0.5s;

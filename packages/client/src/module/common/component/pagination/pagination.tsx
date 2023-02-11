@@ -59,7 +59,6 @@ export const Pagination = ({
                 onClick={onCertainPage.bind(this, pageNumber)}
               >
                 {pageNumber}
-
               </Styled.PaginationButton>
             </Styled.PaginateButtonsListItem>
           );

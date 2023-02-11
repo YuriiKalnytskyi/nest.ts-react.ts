@@ -9,7 +9,7 @@ export const Loading = ({ className, withAnimation, ...restProps }: ILoadingProp
   const [styles, animation] = useSpring(() => ({
     to: { opacity: 1 },
     from: { opacity: 0 },
-    config: { duration: 200 },
+    config: { duration: 200 }
   }));
 
   if (withAnimation) animation.start();

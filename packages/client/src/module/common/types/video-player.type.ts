@@ -23,7 +23,6 @@ export interface DocumentElementWithFullscreen extends HTMLVideoElement {
   webkitSupportsFullscreen?: boolean;
 }
 
-
 export type TChangeProgressBarWidth = () => void;
 
 export interface IControlsBarProps {

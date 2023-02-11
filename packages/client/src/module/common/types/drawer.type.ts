@@ -7,5 +7,4 @@ export interface IDrawerProps {
   children: ReactNode;
   onClose: (arg: boolean) => void;
   open: boolean;
-  component?: string;
 }

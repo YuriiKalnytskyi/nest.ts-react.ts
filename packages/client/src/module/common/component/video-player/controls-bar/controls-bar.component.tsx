@@ -66,41 +66,41 @@ export const ControlsBar = ({
       {/* play pause button */}
       <Styled.ControlsBarElement>
         <Styled.PlayPauseButton
-          type="button"
+          type='button'
           onClick={onTogglePlayPause}
-          aria-label="play pause control"
+          aria-label='play pause control'
         >
           {isPaused ? <Styled.PlayIcon /> : <Styled.PauseIcon />}
         </Styled.PlayPauseButton>
       </Styled.ControlsBarElement>
 
       {/* progress bar */}
-      <Styled.ControlsBarElement data-controls="progress-bar-element">
+      <Styled.ControlsBarElement data-controls='progress-bar-element'>
         <Styled.ProgressBar
           onClick={handleProgressClick}
-          data-controls="progress-bar"
+          data-controls='progress-bar'
           ref={progressBarRef}
-          aria-label="video duration bar"
+          aria-label='video duration bar'
         >
           <Styled.Progress defaultValue={calculateProgressBarWidth()} />
         </Styled.ProgressBar>
       </Styled.ControlsBarElement>
 
       {/* volume button */}
-      <Styled.ControlsBarElement data-controls="volume-element">
-        <Styled.VolumeButton type="button" onClick={onToggleVolume} aria-label="volume control">
+      <Styled.ControlsBarElement data-controls='volume-element'>
+        <Styled.VolumeButton type='button' onClick={onToggleVolume} aria-label='volume control'>
           {isMuted ? <Styled.VolumeOffIcon /> : <Styled.VolumeOnIcon />}
         </Styled.VolumeButton>
 
-        <Styled.VolumeBar data-controls="volume-level-bar" aria-label="volume level bar">
+        <Styled.VolumeBar data-controls='volume-level-bar' aria-label='volume level bar'>
           <Styled.VolumeLevelInput
-            type="range"
-            min="0"
-            max="100"
+            type='range'
+            min='0'
+            max='100'
             value={volumeLevel}
             onChange={handleVolumeChange}
             level={volumeLevel}
-            className="styled-slider slider-progress"
+            className='styled-slider slider-progress'
           />
         </Styled.VolumeBar>
       </Styled.ControlsBarElement>
@@ -108,9 +108,9 @@ export const ControlsBar = ({
       {/* fullscreen button */}
       <Styled.ControlsBarElement>
         <Styled.FullScreenButton
-          type="button"
+          type='button'
           onClick={handleFullScreenToggle}
-          aria-label="fullscreen control"
+          aria-label='fullscreen control'
         >
           <Styled.FullScreenIcon />
         </Styled.FullScreenButton>

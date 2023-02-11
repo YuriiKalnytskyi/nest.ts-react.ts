@@ -15,7 +15,7 @@ export const AddEditLayout = ({
 }: IAddEditLayoutProps) => (
   <Styled.LayoutContainer>
     <Styled.IconContainer>
-      <img id="giftIcon" src={icon} alt={i18n.t('alt.gift_icon') as string} />
+      <img id='giftIcon' src={icon} alt={i18n.t('alt.gift_icon') as string} />
 
       <Styled.HeaderContentWrapper>
         <Styled.Title>{title}</Styled.Title>

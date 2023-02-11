@@ -1,1 +1,1 @@
-export const exampleInitialValues = {  email: 'test@gmail.com',  password: '',  password2: '',  name: ''};
+export const exampleInitialValues = {  email: 'test@gmail.com',  password: '',  password2: '',  name: '',  selectValue: ''};

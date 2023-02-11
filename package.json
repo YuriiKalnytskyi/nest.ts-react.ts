@@ -11,6 +11,7 @@
     "start:local": "lerna run --parallel start:local",
     "format:check": "prettier --check './**/*.{tsx, ts}'",
     "format:fix": "prettier --write './**/*.{ts, tsx}'",
+    "format:fix2": "prettier --write '{**/*,*}.{js,ts,jsx,tsx,css}'",
     "lint:check": "eslint 'packages/**/*.{tsx, ts}'"
   },
   "devDependencies": {

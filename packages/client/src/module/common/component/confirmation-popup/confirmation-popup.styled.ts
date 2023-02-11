@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { IConfirmationPopupContainerProps } from '../../types/confirmation-popup.type';
 import { CloseButton } from '../close-button';
 import { COLORS, FONTS, SPACES } from '../../../../theme';

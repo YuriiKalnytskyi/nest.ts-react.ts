@@ -42,7 +42,7 @@ const AppContainer = () => {
       <QueryClientProvider client={queryClient}>
         <MainRouter />
         {env === 'local' || env === 'dev' ? <ReactQueryDevtools initialIsOpen={false} /> : null}
-        <Toaster position="top-right" reverseOrder />
+        <Toaster position='top-right' reverseOrder />
       </QueryClientProvider>
     </ThemeProvider>
   );

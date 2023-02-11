@@ -30,18 +30,18 @@ export const Input = ({
   const svgStyles = { ...Styled.defaultSvgStyles, ...iconsStyles };
   const pads =
     (withIcon ? `${SPACES.xs} ${SPACES.lxxs}` : innerPads) ||
-    (type === 'password' ? `${SPACES.xs} ${SPACES.lxxs} ${SPACES.xs} ${SPACES.m}`: undefined );
+    (type === 'password' ? `${SPACES.xs} ${SPACES.lxxs} ${SPACES.xs} ${SPACES.m}` : undefined);
 
-  const [types, setTypes] = useState(type)
-  const [isPassword, setIsPassword]=useState(false)
+  const [types, setTypes] = useState(type);
+  const [isPassword, setIsPassword] = useState(false);
 
-  useEffect(()=> {
-    if (type === 'password' && isPassword){
-      setTypes('text')
-    }else {
-      setTypes(type)
+  useEffect(() => {
+    if (type === 'password' && isPassword) {
+      setTypes('text');
+    } else {
+      setTypes(type);
     }
-  },[type, isPassword])
+  }, [type, isPassword]);
 
   const onClickPassword = () => {
     setIsPassword(!isPassword);
@@ -55,7 +55,7 @@ export const Input = ({
         </Styled.Label>
       )}
 
-      {shoudRenderInput &&  inputType === '1' ?
+      {shoudRenderInput && inputType === '1' ? (
         <Styled.Input
           id={name}
           gapFromLabel={gapFromLabel}
@@ -65,37 +65,23 @@ export const Input = ({
           {...field}
           {...props}
         />
-        :
-        <Styled.Input2
-          id={name}
-          type={types}
-          required
-          {...field}
-          {...props}
-        />
-      }
+      ) : (
+        <Styled.Input2 id={name} type={types} required {...field} {...props} />
+      )}
 
-      {label && inputType === '2' &&
+      {label && inputType === '2' && (
         <Styled.Label2 htmlFor={name} className={labelClassName}>
           {label}
         </Styled.Label2>
-      }
-
-
+      )}
 
       {withIcon && React.createElement(withIcon, svgStyles)}
-      {
-        type === 'password' && ( isPassword ?
-          <Styled.Visibility
-            inputType={inputType}
-            onClick={onClickPassword}
-          /> :
-          <Styled.VisibilityOff
-            inputType={inputType}
-            onClick={onClickPassword}
-          />
-        )
-      }
+      {type === 'password' &&
+        (isPassword ? (
+          <Styled.Visibility inputType={inputType} onClick={onClickPassword} />
+        ) : (
+          <Styled.VisibilityOff inputType={inputType} onClick={onClickPassword} />
+        ))}
 
       {textarea && (
         <Styled.Textarea
