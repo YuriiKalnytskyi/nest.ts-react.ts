@@ -6,33 +6,40 @@ import toast from 'react-hot-toast';
 
 import { EAccountFormControls, IOnSubmitData } from './types';
 import { IAuthError, IExampleLogin } from '../../types';
+
 import { exampleInitialValues } from './constants';
 import { APP_KEYS } from '../common/constants';
+import { ESocialMedia } from '../auth/constants';
+
 import { exampleService, exampleAuthService } from '../../services';
+
 import { validationSchemaExample } from './validation';
+
 import { COLORS, FONTS } from '../../theme';
 
 import {
   AddEditLayout,
   AvatarSetup,
+  ButtonAdd,
   ButtonDelete,
+  CloseAndMenu,
   CloseAndOther,
   ConfirmationPopup,
   Drawer,
   Input,
   Loader,
   Loading,
+  OTPInput,
   Pagination,
   SelectInput,
   VideoPlayer
 } from '../common/component';
 
+import { SignInSocialMedia } from '../auth/common';
+
 import * as Styled from './example-module.styled';
 import testVideo from '../../assets/video/video-for-testing.mp4';
 import testIcon from '../../assets/icon/example/add-avatar.svg';
-import { SignInSocialMedia } from '../auth/common/sign-in-social-media/sign-in-social-media';
-import { ESocialMedia } from '../auth/constants';
-import { ButtonAdd } from '../common/component/button/button-add';
 
 const ExampleModule = () => {
   const client = useQueryClient();
@@ -114,6 +121,9 @@ const ExampleModule = () => {
     }
   }, [isShowLoader, isLoader]);
 
+  const [otp, setOtp] = useState('');
+  const onChange = (value: string) => setOtp(value);
+
   return (
     <Styled.Container>
       <Formik
@@ -152,11 +162,37 @@ const ExampleModule = () => {
             />
 
             <SelectInput
-              array={['Patient', 'Doctor']}
+              array={[
+                'Patient',
+                'Doctor',
+                'Patient',
+                'Doctor',
+                'Patient',
+                'Doctor',
+                'Patient',
+                'Doctor',
+                'Patient',
+                'Doctor',
+                'Patient',
+                'Doctor',
+                'Patient',
+                'Doctor',
+                'Patient',
+                'Doctor',
+                'Patient',
+                'Doctor',
+                'Patient',
+                'Doctor',
+                'Patient',
+                'Doctor',
+                'Patient',
+                'Doctor'
+              ]}
               label={'Виберіть'}
               name={'selectValue'}
               isSearch
               mt={'20px'}
+              maxHeightList={'200px'}
             />
 
             <Styled.SaveButton
@@ -166,6 +202,8 @@ const ExampleModule = () => {
               hasErrors={Object.keys(errors).length > 0}
               mt={'20px'}
             />
+
+            <OTPInput mt={'20px'} width={'250px'} value={otp} onChange={onChange} valueLength={6} />
           </Form>
         )}
       </Formik>
@@ -221,7 +259,10 @@ const ExampleModule = () => {
           margin={`0 0 ${FONTS.SIZES.xxxxl} 0`}
         />
 
-        <CloseAndOther hoverColor={'red'} />
+        <div style={{ display: 'flex' }}>
+          <CloseAndOther hoverColor={'red'} />
+          <CloseAndMenu />
+        </div>
 
         {30 && 30 > 10 ? (
           <Pagination

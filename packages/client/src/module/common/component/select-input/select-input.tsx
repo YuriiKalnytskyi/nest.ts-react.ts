@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, List, ListItem, Popover } from '@mui/material';
+import { Button, ListItem, Popover } from '@mui/material';
 import { useFormikContext } from 'formik';
 import i18next from 'i18next';
 
@@ -19,6 +19,7 @@ export const SelectInput = ({
   horizontal = 'right',
   backgroundColor,
   color,
+  maxHeightList,
   name,
   ...props
 }: ISelectInput) => {
@@ -73,7 +74,7 @@ export const SelectInput = ({
         anchorOrigin={position}
         transformOrigin={position}
       >
-        <List>
+        <Styled.ListStyled maxHeightList={maxHeightList}>
           {isSearch && (
             <Styled.InputSearchContainer>
               {inputType === '1' && (
@@ -105,7 +106,7 @@ export const SelectInput = ({
               <Styled.Span color={color}>{i18next.t(item)}</Styled.Span>
             </ListItem>
           ))}
-        </List>
+        </Styled.ListStyled>
       </Popover>
     </Styled.SelectContainer>
   );

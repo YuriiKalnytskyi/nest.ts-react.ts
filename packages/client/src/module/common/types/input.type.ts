@@ -41,3 +41,11 @@ export interface IWProps {
   mb?: string;
   mt?: string;
 }
+
+export interface IOTPInput extends IWProps {
+  value: string;
+  valueLength: number;
+  onChange: (value: string) => void;
+  width?: string;
+  height?: string;
+}

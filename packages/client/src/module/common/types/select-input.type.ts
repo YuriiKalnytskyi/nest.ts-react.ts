@@ -6,6 +6,7 @@ export interface ISelectInput {
   heightSelect?: string;
   inputType?: '1' | '2';
   isSearch?: boolean;
+  maxHeightList?: string;
 
   vertical?: 'top' | 'center' | 'bottom';
   horizontal?: 'left' | 'center' | 'right';

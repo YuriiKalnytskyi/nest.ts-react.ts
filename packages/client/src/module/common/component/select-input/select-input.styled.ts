@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { COLORS, FONTS } from '../../../../theme';
 import { ISelectInput } from '../../types';
 import arrow from '../../../../assets/icon/example/arrow.svg';
+import { List } from '@mui/material';
 
 export const InputSearchContainer = styled.div`
   display: flex;
@@ -43,4 +44,8 @@ export const SelectContainer = styled.div<Partial<ISelectInput>>`
   margin-bottom: ${({ mb }) => mb ?? '0'};
   margin-top: ${({ mt }) => mt ?? '0'};
   
+`;
+
+export const ListStyled = styled(List)<{ maxHeightList?: string }>`
+  max-height: ${({ maxHeightList }) => maxHeightList ?? '300px'};
 `;

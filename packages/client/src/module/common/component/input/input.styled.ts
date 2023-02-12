@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { COLORS, SPACES, FONTS, SHADOWS } from '../../../../theme';
-import { IInputProps, IWProps } from '../../types';
+import { IInputProps, IOTPInput, ISelectInput, IWProps } from '../../types';
 
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
@@ -165,4 +165,29 @@ export const Visibility = styled(VisibilityIcon)`
 
 export const VisibilityOff = styled(VisibilityOffIcon)`
   ${visibilityIcon}
+`;
+
+export const OtpContainer = styled.div<Partial<IOTPInput>>`
+  display: flex;
+  column-gap: 10px;
+
+  max-width: 360px;
+  width: ${({ width }) => width ?? '100%'};
+  height: ${({ height }) => height ?? '40px'};
+
+  margin-left: ${({ ml }) => ml ?? '0'};
+  margin-right: ${({ mr }) => mr ?? '0'};
+  margin-bottom: ${({ mb }) => mb ?? '0'};
+  margin-top: ${({ mt }) => mt ?? '0'};
+`;
+
+export const OtpInput = styled.input`
+  width: 100%;
+  height: 100%;
+  border: 1px solid ${COLORS.semiWhite};
+  border-radius: 5px;
+  text-align: center;
+  font-size: ${FONTS.SIZES.xxxxl};
+  font-weight: bold;
+  line-height: 1;
 `;
