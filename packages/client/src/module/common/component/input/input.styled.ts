@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { COLORS, SPACES, FONTS, SHADOWS } from '../../../../theme';
-import { IInputProps, IOTPInput, ISelectInput, IWProps } from '../../types';
+import { IInputProps, IOTPInput, IWProps } from '../../types';
 
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
@@ -149,12 +149,12 @@ export const defaultSvgStyles = {
   className: 'inputIcon'
 };
 
-const visibilityIcon = css<{ inputType: string }>`
+const visibilityIcon = css<{ top: string }>`
   color: ${COLORS.black};
   cursor: pointer;
   position: absolute;
   top: 50%;
-  top: ${({ inputType }) => (inputType === '1' ? '70%' : '50%;')};
+  top: ${({ top }) => (top === '1' ? '70%' : '50%;')};
   right: ${SPACES.xs};
   transform: translateY(-50%);
 `;

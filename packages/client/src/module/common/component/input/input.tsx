@@ -60,7 +60,6 @@ export const Input = ({
           id={name}
           gapFromLabel={gapFromLabel}
           innerPads={pads}
-          inputType={inputType}
           type={types}
           {...field}
           {...props}
@@ -78,9 +77,9 @@ export const Input = ({
       {withIcon && React.createElement(withIcon, svgStyles)}
       {type === 'password' &&
         (isPassword ? (
-          <Styled.Visibility inputType={inputType} onClick={onClickPassword} />
+          <Styled.Visibility top={inputType} onClick={onClickPassword} />
         ) : (
-          <Styled.VisibilityOff inputType={inputType} onClick={onClickPassword} />
+          <Styled.VisibilityOff top={inputType} onClick={onClickPassword} />
         ))}
 
       {textarea && (

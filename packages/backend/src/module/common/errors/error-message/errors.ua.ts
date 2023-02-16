@@ -1,0 +1,1 @@
+const ERROR_MESSAGES = Object.freeze({  ALREADY_EXIST_USER: 'такий користувач вже існує',  NOT_FOUND_USER: 'користувача не знайдено',  SOMETHING_WRONG: 'інша помилка',  UNABLE_ENCRYPT: 'не вдається зашифрувати ваш пароль',  INVALID_PASSWORD: 'невірний пароль',  SOCIAL_MEDIA: 'ви зареєструвалися через соціальні мережі'});export default ERROR_MESSAGES;

@@ -1,0 +1,1 @@
+const ERROR_MESSAGES = Object.freeze({  ALREADY_EXIST_USER: 'user already exists',  NOT_FOUND_USER: 'user does not exist',  SOMETHING_WRONG: 'something went wrong',  UNABLE_ENCRYPT: 'unable to encrypt your password',  INVALID_PASSWORD: 'invalid password',  SOCIAL_MEDIA: 'you registred via social media'});export default ERROR_MESSAGES;

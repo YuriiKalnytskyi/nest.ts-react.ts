@@ -1,1 +1,1 @@
-export * from './roles.type';export * from './user.type';export * from './auth.type';export interface IID {  id: string;}export enum ESort {  ASC = 'ASC',  DESC = 'DESC'}
+export * from './roles.type';export * from './user.type';export * from './auth.type';export * from './error.type';export interface IID {  id: string;}export enum ESort {  ASC = 'ASC',  DESC = 'DESC'}
