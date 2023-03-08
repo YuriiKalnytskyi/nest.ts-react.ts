@@ -6,11 +6,6 @@ import toast from 'react-hot-toast';
 import { useMutation } from 'react-query';
 import { redirect, useLocation } from 'react-router-dom';
 
-
-
-
-
-
 import facebookIcon from '../../../../assets/icon/social-media/facebookIcon.svg';
 import googleIcon from '../../../../assets/icon/social-media/googleIcon.svg';
 import { authService } from '../../../../services';
