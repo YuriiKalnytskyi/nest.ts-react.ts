@@ -1,7 +1,7 @@
 import { AxiosError } from 'axios';
 import i18next from 'i18next';
 import * as queryString from 'querystring';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import toast from 'react-hot-toast';
 import { useMutation } from 'react-query';
 import { redirect, useLocation } from 'react-router-dom';
