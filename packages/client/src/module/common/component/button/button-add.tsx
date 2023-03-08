@@ -1,8 +1,7 @@
-import React, { useRef } from 'react';
 import i18next from 'i18next';
+import React, { useRef } from 'react';
 
 import { IButtonAdd } from '../../types';
-
 import * as Styled from './styled/button-add';
 
 export const ButtonAdd = ({ content = 'text', ...props }: IButtonAdd) => {

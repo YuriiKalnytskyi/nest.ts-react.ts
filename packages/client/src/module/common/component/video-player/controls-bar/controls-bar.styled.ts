@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 
-import { ReactComponent as PlaySvgIcon } from '../../../../../assets/icon/video-player/controls/play.svg';
-import { ReactComponent as PauseSvgIcon } from '../../../../../assets/icon/video-player/controls/pause.svg';
-import { ReactComponent as VolumeOnSvgIcon } from '../../../../../assets/icon/video-player/controls/volume-on.svg';
-import { ReactComponent as VolumeOffSvgIcon } from '../../../../../assets/icon/video-player/controls/volume-off.svg';
 import { ReactComponent as FullScreenSvgIcon } from '../../../../../assets/icon/video-player/controls/fullscreen.svg';
+import { ReactComponent as PauseSvgIcon } from '../../../../../assets/icon/video-player/controls/pause.svg';
+import { ReactComponent as PlaySvgIcon } from '../../../../../assets/icon/video-player/controls/play.svg';
 import { ReactComponent as TransparentPlaySvgIcon } from '../../../../../assets/icon/video-player/controls/transparent-play-icon.svg';
+import { ReactComponent as VolumeOffSvgIcon } from '../../../../../assets/icon/video-player/controls/volume-off.svg';
+import { ReactComponent as VolumeOnSvgIcon } from '../../../../../assets/icon/video-player/controls/volume-on.svg';
 
 // ========================== controls bar ====================================//
 export const ControlsBar = styled.ul`

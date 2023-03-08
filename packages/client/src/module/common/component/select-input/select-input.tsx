@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
 import { Button, ListItem, Popover } from '@mui/material';
 import { useFormikContext } from 'formik';
 import i18next from 'i18next';
+import React, { useState } from 'react';
 
 import { COLORS, SPACES } from '../../../../theme';
 import { inputConstSearch, labelConst } from '../../constants';
-
+import { ISelectInput } from '../../types';
 import * as InputStyled from '../input/input.styled';
 import * as Styled from './select-input.styled';
-import { ISelectInput } from '../../types';
 
 export const SelectInput = ({
   array,

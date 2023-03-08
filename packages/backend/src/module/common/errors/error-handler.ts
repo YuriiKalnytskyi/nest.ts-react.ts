@@ -1,7 +1,6 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
 
 import { IErrorHandler } from '../types';
-
 import ERROR_MESSAGES_EN from './error-message/errors.en';
 import ERROR_MESSAGES_UA from './error-message/errors.ua';
 

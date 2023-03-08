@@ -1,10 +1,9 @@
-import React from 'react';
 import i18n from 'i18next';
+import React from 'react';
 
 import addAvatar from '../../../../assets/icon/example/add-avatar.svg';
-
-import * as Styled from './avatar-setup.styled';
 import { IAvatarSetup } from '../../types/avatar-setup.type';
+import * as Styled from './avatar-setup.styled';
 
 export const AvatarSetup = ({ label, avatar, handleAvatarUpload, delAvatar }: IAvatarSetup) => {
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
+
 import { IPortalProps } from '../../types';
 
 const portalRoot = document.querySelector('#portal-root') as HTMLElement;

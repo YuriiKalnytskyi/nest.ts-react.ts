@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { COLORS, SPACES, FONTS } from '../../../../../theme';
+
+import { COLORS, FONTS, SPACES } from '../../../../../theme';
 import { IButtonAdd } from '../../../types';
 
 export const ButtonAdd = styled.button<IButtonAdd>`

@@ -1,10 +1,9 @@
-import React from 'react';
 import i18n from 'i18next';
+import React from 'react';
 
 import giftIcon from '../../../../assets/icon/red-gift.svg';
-
-import * as Styled from './add-edit-layout.styled';
 import { IAddEditLayoutProps } from '../../types';
+import * as Styled from './add-edit-layout.styled';
 
 export const AddEditLayout = ({
   text,

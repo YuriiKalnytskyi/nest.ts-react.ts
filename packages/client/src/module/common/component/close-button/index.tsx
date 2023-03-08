@@ -1,9 +1,9 @@
-import React from 'react';
 import i18n from 'i18next';
+import React from 'react';
 
+import closeIconImage from '../../../../assets/icon/closeIcon.svg';
 import { ICloseButtonProps } from '../../types';
 import * as Styled from './close-button.styled';
-import closeIconImage from '../../../../assets/icon/closeIcon.svg';
 
 export const CloseButton = ({ width, height, ...props }: ICloseButtonProps) => (
   <Styled.Button {...props}>

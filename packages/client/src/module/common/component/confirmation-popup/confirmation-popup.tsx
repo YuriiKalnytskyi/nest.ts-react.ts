@@ -1,12 +1,11 @@
-import React from 'react';
-import i18n from 'i18next';
 import { Modal } from '@mui/material';
+import i18n from 'i18next';
+import React from 'react';
 
+import giftIcon from '../../../../assets/icon/giftIcon.svg';
+import '../../../../styles/confirmation-popup.css';
 import { IConfirmationPopup } from '../../types/confirmation-popup.type';
 import * as Styled from './confirmation-popup.styled';
-import giftIcon from '../../../../assets/icon/giftIcon.svg';
-
-import '../../../../styles/confirmation-popup.css';
 
 export const ConfirmationPopup = ({
   title,

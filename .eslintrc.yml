@@ -11,6 +11,7 @@ extends:
   - plugin:prettier/recommended
   - airbnb
   - airbnb-typescript
+  - react-app
 
 # ⭐ Parser
 parser: '@typescript-eslint/parser'

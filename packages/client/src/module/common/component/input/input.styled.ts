@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components';
-import { COLORS, SPACES, FONTS, SHADOWS } from '../../../../theme';
-import { IInputProps, IOTPInput, IWProps } from '../../types';
-
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import styled, { css } from 'styled-components';
+
+import { COLORS, FONTS, SHADOWS, SPACES } from '../../../../theme';
+import { IInputProps, IOTPInput, IWProps } from '../../types';
 
 const commonStyles = css<IInputProps>`
   margin: 0;

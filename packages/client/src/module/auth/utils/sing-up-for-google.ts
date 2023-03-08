@@ -1,5 +1,5 @@
-import * as queryString from 'querystring';
 import axios from 'axios';
+import * as queryString from 'querystring';
 
 import { ISignInSocialMedia } from '../../../types';
 

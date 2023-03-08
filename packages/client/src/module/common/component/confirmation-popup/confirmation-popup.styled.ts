@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+
+import { COLORS, FONTS, SPACES } from '../../../../theme';
 import { IConfirmationPopupContainerProps } from '../../types/confirmation-popup.type';
 import { CloseButton } from '../close-button';
-import { COLORS, FONTS, SPACES } from '../../../../theme';
 
 export const Container = styled.div<IConfirmationPopupContainerProps>`
   display: flex;

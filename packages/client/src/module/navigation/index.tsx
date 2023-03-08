@@ -1,10 +1,9 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { APP_KEYS } from '../common/constants';
-
-import ExampleModule from '../example-module/example-module';
 import Login from '../auth/component/login';
+import { APP_KEYS } from '../common/constants';
+import ExampleModule from '../example-module/example-module';
 
 export const MainRouter = () => {
   return (

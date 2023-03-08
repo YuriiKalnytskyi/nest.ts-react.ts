@@ -1,7 +1,7 @@
-import React from 'react';
 import i18next from 'i18next';
+import React from 'react';
 
-import { IButtonProps, TNavLink, IButtonWithIconProps } from '../../types';
+import { IButtonProps, IButtonWithIconProps, TNavLink } from '../../types';
 import * as Styled from './styled/button.styled';
 
 export const Button = ({

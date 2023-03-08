@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
 import { useField } from 'formik';
 import i18next from 'i18next';
-import { IInputProps } from '../../types';
+import React, { useEffect, useRef, useState } from 'react';
+
 import { SPACES } from '../../../../theme';
+import { IInputProps } from '../../types';
 import * as Styled from './input.styled';
 
 export const Input = ({

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ICloseAndOther } from '../../types';
 import '../../../../styles/close-and-other.css';
+import { ICloseAndOther } from '../../types';
 
 export const CloseAndOther = ({ hoverColor, transformRotate = false }: ICloseAndOther) => {
   return (

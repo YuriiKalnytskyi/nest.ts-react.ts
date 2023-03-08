@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const defaultWidth = 375; // width in px
 const defaultHeight = 210; // height in px

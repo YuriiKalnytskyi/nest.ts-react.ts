@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { usePagination } from '../../hooks';
 import { IPaginationProps } from '../../types';
 import * as Styled from './pagination.styled';

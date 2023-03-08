@@ -9,3 +9,10 @@ trailingComma: none
 useTabs: false
 endOfLine: auto
 semi: true
+importOrder: [
+    "<THIRD_PARTY_MODULES>",
+    "^[./]"
+]
+importOrderSeparation: true
+importOrderSortSpecifiers: true
+importOrderParserPlugins: ["typescript", "decorators-legacy", "jsx"]

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+
 import { COLORS } from '../../../../theme';
 import { ILoaderProps } from '../../types';
 

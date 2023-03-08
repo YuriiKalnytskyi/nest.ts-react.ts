@@ -1,9 +1,9 @@
+import { List } from '@mui/material';
 import styled from 'styled-components';
 
+import arrow from '../../../../assets/icon/example/arrow.svg';
 import { COLORS, FONTS } from '../../../../theme';
 import { ISelectInput } from '../../types';
-import arrow from '../../../../assets/icon/example/arrow.svg';
-import { List } from '@mui/material';
 
 export const InputSearchContainer = styled.div`
   display: flex;

@@ -1,22 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { useMutation, useQueryClient } from 'react-query';
 import { AxiosError } from 'axios';
-import { Formik, Form } from 'formik';
+import { Form, Formik } from 'formik';
+import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import { useMutation, useQueryClient } from 'react-query';
 
-import { EAccountFormControls, IOnSubmitData } from './types';
-import { IAuthError, IExampleLogin } from '../../types';
-
-import { exampleInitialValues } from './constants';
-import { APP_KEYS } from '../common/constants';
-import { ESocialMedia } from '../auth/constants';
-
-import { exampleService, exampleAuthService } from '../../services';
-
-import { validationSchemaExample } from './validation';
-
+import testIcon from '../../assets/icon/example/add-avatar.svg';
+import testVideo from '../../assets/video/video-for-testing.mp4';
+import { exampleAuthService, exampleService } from '../../services';
 import { COLORS, FONTS } from '../../theme';
-
+import { IAuthError, IExampleLogin } from '../../types';
+import { SignInSocialMedia } from '../auth/common';
+import { ESocialMedia } from '../auth/constants';
 import {
   AddEditLayout,
   AvatarSetup,
@@ -34,12 +28,11 @@ import {
   SelectInput,
   VideoPlayer
 } from '../common/component';
-
-import { SignInSocialMedia } from '../auth/common';
-
+import { APP_KEYS } from '../common/constants';
+import { exampleInitialValues } from './constants';
 import * as Styled from './example-module.styled';
-import testVideo from '../../assets/video/video-for-testing.mp4';
-import testIcon from '../../assets/icon/example/add-avatar.svg';
+import { EAccountFormControls, IOnSubmitData } from './types';
+import { validationSchemaExample } from './validation';
 
 const ExampleModule = () => {
   const client = useQueryClient();

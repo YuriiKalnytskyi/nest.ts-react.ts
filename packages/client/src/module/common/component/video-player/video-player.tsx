@@ -1,5 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
+import { useAspectRatio, useDetectBrowserType } from '../../hooks';
 import {
   DocumentElementWithFullscreen,
   DocumentWithFullscreen,
@@ -7,10 +8,8 @@ import {
   IVideoPlayeriOSProps,
   TChangeProgressBarWidth
 } from '../../types';
-import { useAspectRatio, useDetectBrowserType } from '../../hooks';
 import { ControlsBar } from './controls-bar';
 import { BigPlayButton } from './controls-bar/controls-bar.styled';
-
 import * as Styled from './video-player.styled';
 
 const defaultOptions: IPlayerOptions = {

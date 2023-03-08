@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+
 import { IUsePaginationHookProps } from '../types';
 
 const DOTS = '...';

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+
 import { ReactComponent as ArrowLeftSvgIcon } from '../../../../assets/icon/example/arrow-left.svg';
 import { ReactComponent as ArrowRightSvgIcon } from '../../../../assets/icon/example/arrow-right.svg';
 import { COLORS, FONTS, SHADOWS, SPACES } from '../../../../theme';

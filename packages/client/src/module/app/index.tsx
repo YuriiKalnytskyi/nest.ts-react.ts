@@ -1,16 +1,13 @@
 import React from 'react';
-
-import { ThemeProvider } from 'styled-components';
+import toast, { Toaster } from 'react-hot-toast';
 import { QueryCache, QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-
-import toast, { Toaster } from 'react-hot-toast';
-
-import i18next from '../common/i18n/config';
+import { ThemeProvider } from 'styled-components';
 
 import * as theme from '../../theme';
-import * as Styled from './app.styled';
+import i18next from '../common/i18n/config';
 import { MainRouter } from '../navigation';
+import * as Styled from './app.styled';
 
 const queryClient = new QueryClient({
   defaultOptions: {

@@ -1,27 +1,25 @@
-import React, { useEffect } from 'react';
-import i18next from 'i18next';
-import toast from 'react-hot-toast';
-import * as queryString from 'querystring';
-
 import { AxiosError } from 'axios';
-import { useLocation, redirect } from 'react-router-dom';
+import i18next from 'i18next';
+import * as queryString from 'querystring';
+import React, { useEffect } from 'react';
+import toast from 'react-hot-toast';
 import { useMutation } from 'react-query';
+import { redirect, useLocation } from 'react-router-dom';
 
+import facebookIcon from '../../../../assets/icon/social-media/facebookIcon.svg';
+import googleIcon from '../../../../assets/icon/social-media/googleIcon.svg';
+import { authService } from '../../../../services';
+import { ISignInSocialMedia } from '../../../../types';
+import { APP_KEYS } from '../../../common/constants';
+import { IToken } from '../../../common/types';
+import { IArrayIcons, ISingUPProps } from '../../types';
 import {
   getAccessTokenFacebook,
   getAccessTokenGoogle,
   singUpForFacebook,
   singUpForGoogle
 } from '../../utils';
-import { ISignInSocialMedia } from '../../../../types';
-import { IArrayIcons, ISingUPProps } from '../../types';
-import { authService } from '../../../../services';
-import { APP_KEYS } from '../../../common/constants';
-import { IToken } from '../../../common/types';
-
 import * as Styled from './sign-in-social-media.styled';
-import googleIcon from '../../../../assets/icon/social-media/googleIcon.svg';
-import facebookIcon from '../../../../assets/icon/social-media/facebookIcon.svg';
 
 export const SignInSocialMedia = ({ component, margin }: ISingUPProps) => {
   const location = useLocation();
@@ -80,6 +78,7 @@ export const SignInSocialMedia = ({ component, margin }: ISingUPProps) => {
         facebookGetToken.mutate(code);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const arrayIcons: IArrayIcons = {

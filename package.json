@@ -10,11 +10,11 @@
   "scripts": {
     "start:local": "lerna run --parallel start:local",
     "format:check": "prettier --check './**/*.{tsx, ts}'",
-    "format:fix": "prettier --write './**/*.{ts, tsx}'",
-    "format:fix2": "prettier --write '{**/*,*}.{js,ts,jsx,tsx,css}'",
+    "format:fix": "prettier --write '{**/*,*}.{js,ts,jsx,tsx,css}'",
     "lint:check": "eslint 'packages/**/*.{tsx, ts}'"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
     "dotenv": "^16.0.1",
@@ -23,6 +23,7 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.4.2",
+    "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^4.2.1",

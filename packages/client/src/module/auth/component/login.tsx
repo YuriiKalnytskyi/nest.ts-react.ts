@@ -1,7 +1,8 @@
 import React from 'react';
+
+import { FONTS } from '../../../theme';
 import { SignInSocialMedia } from '../common/sign-in-social-media/sign-in-social-media';
 import { ESocialMedia } from '../constants';
-import { FONTS } from '../../../theme';
 
 const Login = () => {
   return (

@@ -1,10 +1,9 @@
-import React, { useRef } from 'react';
 import i18next from 'i18next';
+import React, { useRef } from 'react';
 
-import { IButtonDelete } from '../../types';
-
-import * as Styled from './styled/button.styled';
 import '../../../../styles/button.css';
+import { IButtonDelete } from '../../types';
+import * as Styled from './styled/button.styled';
 
 export const ButtonDelete = ({ content, ...props }: IButtonDelete) => {
   const refBtn = useRef<HTMLButtonElement>(null);

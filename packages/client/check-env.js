@@ -7,10 +7,10 @@ const envSchema = {
   REACT_APP_CLIENT_URL: Joi.string().required(),
   REACT_APP_SERVER_URL: Joi.string().required(),
 
-  REACT_APP_GOOGLE_CLIENT_ID:Joi.string().required(),
-  REACT_APP_GOOGLE_CLIENT_SECRET:Joi.string().required(),
-  REACT_APP_FACEBOOK_CLIENT_ID:Joi.string().required(),
-  REACT_APP_FACEBOOK_CLIENT_SECRET:Joi.string().required(),
+  REACT_APP_GOOGLE_CLIENT_ID: Joi.string().required(),
+  REACT_APP_GOOGLE_CLIENT_SECRET: Joi.string().required(),
+  REACT_APP_FACEBOOK_CLIENT_ID: Joi.string().required(),
+  REACT_APP_FACEBOOK_CLIENT_SECRET: Joi.string().required()
 };
 
 const envVariables = process.env;

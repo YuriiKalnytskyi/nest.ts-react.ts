@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { ICloseAndMenu } from '../../../types';
 import { COLORS } from '../../../../../theme';
+import { ICloseAndMenu } from '../../../types';
 
 export const CheckboxContainer = styled.div<ICloseAndMenu>`
   position: relative;

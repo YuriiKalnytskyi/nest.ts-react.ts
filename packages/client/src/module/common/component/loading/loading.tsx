@@ -1,9 +1,9 @@
 import React from 'react';
 import { animated, useSpring } from 'react-spring';
 
-import { Loader } from './index';
 import '../../../../styles/loading.css';
 import { ILoadingProps } from '../../types';
+import { Loader } from './index';
 
 export const Loading = ({ className, withAnimation, ...restProps }: ILoadingProps) => {
   const [styles, animation] = useSpring(() => ({

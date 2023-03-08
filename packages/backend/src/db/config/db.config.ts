@@ -1,4 +1,5 @@
 import { registerAs } from '@nestjs/config';
+
 import { Users } from '../models';
 
 export default registerAs('database', () => {
