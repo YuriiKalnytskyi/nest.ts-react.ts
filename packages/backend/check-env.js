@@ -7,13 +7,7 @@ const envSchema = {
   // Backend secrets
   JWT_SECRET: Joi.string().required(),
   // Postgres setup
-  POSTGRES_HOST: Joi.string().required(),
-  POSTGRES_PORT_DB: Joi.number().required(),
-  POSTGRES_USER: Joi.string().required(),
-  POSTGRES_PASSWORD: Joi.string().required(),
-  POSTGRES_DB: Joi.string().required(),
-  // server mode
-  SERVER_MODE: Joi.string().required()
+  DATABASE_URL: Joi.string().required()
 };
 
 const envVariables = process.env;
