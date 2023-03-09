@@ -7,7 +7,9 @@
     "start:local": "ENV=local npm run check_env_and_start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:cypress": "start-server-and-test start:local http://localhost:3000 cypress",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -42,7 +44,9 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
-    "env-cmd": "^10.1.0"
+    "cypress": "^12.7.0",
+    "env-cmd": "^10.1.0",
+    "start-server-and-test": "^2.0.0"
   },
   "eslintConfig": {
     "extends": [

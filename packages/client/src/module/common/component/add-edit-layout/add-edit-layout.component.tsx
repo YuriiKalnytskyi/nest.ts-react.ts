@@ -21,7 +21,7 @@ export const AddEditLayout = ({
         <Styled.Text>{text}</Styled.Text>
       </Styled.HeaderContentWrapper>
 
-      <Styled.CloseBtn onClick={onCloseButtonClick} />
+      <Styled.CloseBtn id='closeDrawer' onClick={onCloseButtonClick} />
     </Styled.IconContainer>
 
     <Styled.ContentContainer>{children}</Styled.ContentContainer>
