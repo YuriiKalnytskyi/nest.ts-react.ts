@@ -72,7 +72,7 @@ jobs:
           cache: npm
           cache-dependency-path: ./package-lock.json
       - run: npm ci
-      - run: npm run check_env --if-present
+      - run: npm run test:cypress_local --if-present
 
   backend:
     needs:

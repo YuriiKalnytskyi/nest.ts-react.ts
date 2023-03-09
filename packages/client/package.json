@@ -8,8 +8,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:cypress": "start-server-and-test start:local http://localhost:3000 cypress",
-    "cypress": "cypress open"
+    "test:cypress": "start-server-and-test start:local http://localhost:3000 cypress:open",
+    "test:cypress_local": "start-server-and-test start:local http://localhost:3000 cypress:run",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",

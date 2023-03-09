@@ -1,6 +1,6 @@
 describe('Login', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/example');
+    cy.visit('/example');
   });
 
   it('type-text', () => {
